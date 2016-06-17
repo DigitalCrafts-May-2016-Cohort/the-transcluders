@@ -211,6 +211,7 @@
           var errorCode = error.code;
           var errorMessage = error.message;
           $('#loginMessage').text('Invalid username or password. Please try again.');
+          $('#loginMessage').append('<img src="http://i.imgur.com/2PZ8XUR.gif">');
           console.log('Error: ', errorMessage);
         });
       }
@@ -229,6 +230,7 @@
           var errorCode = error.code;
           var errorMessage = error.message;
           $('#createAccountMessage').text('There was an error: ' + errorMessage);
+          $('#createAccountMessage').append('<img src="http://i.imgur.com/2PZ8XUR.gif">');
           console.log('errorCode: ', errorCode);
         });
       }
