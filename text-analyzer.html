@@ -8,24 +8,25 @@
   <img ng-src="{{starsImg}}" ng-show="showStars"> <!--display stars -->
   <div ng-class="sentimentScore > 0 ? 'positive' : (sentimentScore < 0 ? 'negative' : 'neutral')">Sentiment: {{sentiment}} </div>
   <div>Sentiment Score: {{sentimentScore}} </div>
+  <h1>Hello {{emotions.disgust}}</h1>
   <div>
-    <div class="imgHolder" ng-show="anger">
+    <div class="imgHolder" ng-show="emotions.anger >= 0.5">
       <img src="emotions/anger.png" alt="anger">
       <span>Anger</span>
     </div>
-    <div class="imgHolder" ng-show="disgust">
+    <div class="imgHolder" ng-show="emotions.disgust >= 0.5">
       <img src="emotions/disgust.png" alt="disgust">
       <span>Disgust</span>
     </div>
-    <div class="imgHolder" ng-show="fear">
+    <div class="imgHolder" ng-show="emotions.fear >= 0.5">
       <img src="emotions/fear.png" alt="fear">
       <span>Fear</span>
     </div>
-    <div class="imgHolder" ng-show="joy">
+    <div class="imgHolder" ng-show="emotions.joy >= 0.5">
       <img src="emotions/joy.png" alt="joy">
       <span>Joy</span>
     </div>
-    <div class="imgHolder" ng-show="sadness">
+    <div class="imgHolder" ng-show="emotions.sadness >= 0.5">
       <img src="emotions/sadness.png" alt="sadness">
       <span>Sadness</span>
     </div>
